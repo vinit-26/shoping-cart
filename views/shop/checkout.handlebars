@@ -1,0 +1,68 @@
+<div class="row">
+    <div class="col-sm-6 col-md-6 offset-md-3 offset-sm-3">
+        <h1>Checkout</h1>
+        <h4>Your Total: &#x20B9;{{ total }}</h4>
+        <div id="charge-error" class="alert alert-danger {{#if noError}}hidden{{/if}}">
+            {{errMsg}}
+        </div>
+        <form action="/checkout" method="POST" id="checkout-form">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" class="form-control">
+                    </div>
+                </div>
+                <div class="col-sm-12">
+                    <div class="form-group">
+                        <label for="address">Address</label>
+                        <input type="text" id="address" name="address" class="form-control">
+                    </div>
+                </div>
+                <div class="col-sm-12">
+                    <div class="form-group">
+                        <label for="card-name">Card Holder Name</label>
+                        <input type="text" id="card-name" name="card-name" class="form-control">
+                    </div>
+                </div>
+                <div class="col-sm-12">
+                    <div class="form-group">
+                        <label for="card-number">Card Number</label>
+                        <input maxlength="16" type="text" id="card-number" name="card-number" class="form-control">
+                    </div>
+                </div>
+                <div class="col-sm-12">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label for="card-expiration-month">Excepiration Month</label>
+                                <input type="text" id="card-expiration-month" name="card-expiration-month"
+                                    class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label for="card-expiration-year">Excepiration year</label>
+                                <input type="text" id="card-expiration-year" name="card-expiration-year"
+                                    class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12">
+                    <div class="form-group">
+                        <label for="card-cvv">CVV/CVC</label>
+                        <input type="text" id="card-cvv" name="card-cvv" class="form-control">
+                    </div>
+                </div>
+                <div class="col-sm-12">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </div>
+
+        </form>
+    </div>
+</div>
+
+<script src="/javascripts/jsStripe.js"></script>
+<script src="/javascripts/checkout.js"></script>
