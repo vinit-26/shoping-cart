@@ -26,7 +26,8 @@
     "morgan": "~1.9.1",
     "passport": "^0.4.1",
     "passport-local": "^1.0.0",
-    "stripe": "^8.63.0"
+    "stripe": "^8.63.0",
+    "@handlebars/allow-prototype-access": "^1.0.3"
   },
   "devDependencies": {
     "@handlebars/allow-prototype-access": "^1.0.3"
